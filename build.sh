@@ -17,12 +17,8 @@ dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 
 ## App installs test
 dnf -y install jellyfin
-wget --trust-server-names https://mullvad.net/download/app/rpm/latest
-DLMV=$(ls | grep Mullvad)
-echo $DLMV
-ls /opt
-ls /var/log/
-dnf -y install ./$DLMV
+curl https://repository.mullvad.net/rpm/stable/mullvad.repo | tee /etc/yum.repos.d/mullvad.repo
+rpm-ostree install mullvad-vpn
 
 ## Use a COPR Example:
 ##
