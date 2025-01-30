@@ -20,6 +20,8 @@ dnf -y install jellyfin
 wget --trust-server-names https://mullvad.net/download/app/rpm/latest
 DLMV=$(ls | grep Mullvad)
 echo $DLMV
+ls /opt
+ls /var/log/
 dnf -y install ./$DLMV
 
 ## Use a COPR Example:
