@@ -16,7 +16,7 @@ dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 # dnf install -y tmux
 
 ## App installs test
-curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
+curl https://repository.mullvad.net/rpm/stable/mullvad.repo | tee /etc/yum.repos.d/mullvad.repo
 dnf -y install mullvad-vpn jellyfin
 
 ## Use a COPR Example:
