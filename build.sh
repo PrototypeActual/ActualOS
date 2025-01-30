@@ -16,11 +16,11 @@ dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 # dnf install -y tmux
 
 ## App installs test
+dnf -y install jellyfin
 wget --trust-server-names https://mullvad.net/download/app/rpm/latest
 DLMV=$(ls | grep Mullvad)
 echo $DLMV
-# dnf install ./$DLMV
-dnf -y install jellyfin https://mullvad.net/download/app/rpm/latest
+dnf -y install ./$DLMV
 
 ## Use a COPR Example:
 ##
