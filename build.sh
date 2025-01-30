@@ -16,7 +16,7 @@ dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 # dnf install -y tmux
 
 ## App installs test
-curl -fsSLo /etc/yum.repos.d/mullvad.repo https://repository.mullvad.net/rpm/stable/mullvad.repo
+curl https://repository.mullvad.net/rpm/stable/mullvad.repo | sudo tee /etc/yum.repos.d/mullvad.repo
 dnf -y install mullvad-vpn jellyfin
 
 ## Use a COPR Example:
@@ -27,5 +27,4 @@ dnf -y install mullvad-vpn jellyfin
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
 systemctl enable podman.socket
